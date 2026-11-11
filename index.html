@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renz Jay Algario - Full Stack Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#070b14',
+                        gray: {
+                            50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1',
+                            400: '#94a3b8', 500: '#64748b', 600: '#3b4a66', 700: '#243049',
+                            800: '#162036', 900: '#0e1526', 950: '#0a0f1c'
+                        },
+                        accent: { DEFAULT: '#2dd4bf', light: '#5eead4', dark: '#0d9488' }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="font-display text-2xl font-bold tracking-tight">RJA<span class="text-accent">.</span></a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-8">
+                    <a href="#home" class="nav-link text-sm font-medium hover:text-accent">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium hover:text-accent">About</a>
+                    <a href="#skills" class="nav-link text-sm font-medium hover:text-accent">Skills</a>
+                    <a href="#services" class="nav-link text-sm font-medium hover:text-accent">Services</a>
+                    <a href="#projects" class="nav-link text-sm font-medium hover:text-accent">Projects</a>
+                    <a href="#journey" class="nav-link text-sm font-medium hover:text-accent">Journey</a>
+                    <a href="#contact" class="nav-link text-sm font-medium hover:text-accent">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden menu-toggle">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="w-full h-full flex flex-col justify-center items-center gap-8">
+            <a href="#home" class="text-2xl font-semibold hover:text-accent mobile-nav-link">Home</a>
+            <a href="#about" class="text-2xl font-semibold hover:text-accent mobile-nav-link">About</a>
+            <a href="#skills" class="text-2xl font-semibold hover:text-accent mobile-nav-link">Skills</a>
+            <a href="#services" class="text-2xl font-semibold hover:text-accent mobile-nav-link">Services</a>
+            <a href="#projects" class="text-2xl font-semibold hover:text-accent mobile-nav-link">Projects</a>
+            <a href="#journey" class="text-2xl font-semibold hover:text-accent mobile-nav-link">Journey</a>
+            <a href="#contact" class="text-2xl font-semibold hover:text-accent mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen gradient-animate flex items-center pt-20 overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 -left-40 w-96 h-96 bg-accent rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+        <div class="absolute bottom-20 -right-40 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="fade-in">
+                    <div class="status-pill mb-6">
+                        <span class="status-dot"></span>
+                        Available for freelance &amp; full-time work
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        Hey, I'm <span class="text-gradient">Renz Jay</span>
+                    </h1>
+                    
+                    <div class="text-xl md:text-2xl font-semibold mb-8 text-gray-300 h-12 flex items-center"><span class="text-accent mr-2">&gt;</span>
+                        <span class="typing-effect">Full Stack Developer</span>
+                    </div>
+
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed max-w-lg">
+                        Crafting digital experiences with modern web technologies, mobile apps, and elegant solutions. Passionate about creating beautiful, responsive, and user-centric applications.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#projects" class="text-center px-8 py-4 bg-accent text-black font-semibold rounded-lg hover:bg-accent-light transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            View Projects
+                        </a>
+                        <a href="#contact" class="text-center px-8 py-4 glass border border-gray-500 font-semibold rounded-lg hover:border-accent transition-all duration-300 transform hover:scale-105">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-6">
+                        <a href="https://www.facebook.com/share/18nuPDUxeo/" target="_blank" class="w-12 h-12 glass rounded-lg flex items-center justify-center hover:bg-accent hover:text-black transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ren-zey-96a1552a5" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-12 h-12 glass rounded-lg flex items-center justify-center hover:bg-accent hover:text-black transition-all duration-300 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Profile Image -->
+                <div class="fade-in" style="animation-delay: 0.2s">
+                    <div class="relative w-full aspect-square">
+                        <div class="absolute inset-0 glass rounded-2xl border-2 border-gray-700 overflow-hidden">
+                            <img src="images/ren.jpg" alt="Renz Jay Algario" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-40 h-40 border-2 border-accent rounded-xl opacity-40"></div>
+                        <div class="absolute -top-4 -left-4 w-32 h-32 border-2 border-indigo-400 rounded-xl opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="hidden md:block absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+                <div class="animate-bounce">
+                    <svg class="w-6 h-6 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-900 to-black relative">
+        <div class="max-w-7xl mx-auto">
+            <p class="section-eyebrow reveal"><span>01</span> About</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center section-title reveal">About Me</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left Image -->
+                <div class="glass rounded-2xl p-8 reveal overflow-hidden">
+                    <div class="aspect-square rounded-xl overflow-hidden">
+                        <img src="images/ren.jpg" alt="Renz Jay Algario" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="reveal" style="transition-delay: 0.2s">
+                    <h3 class="text-3xl font-bold mb-6">Full Stack Developer & Creative Problem Solver</h3>
+                    
+                    <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                        I'm passionate about programming and transforming ideas into elegant digital solutions. With expertise in full-stack web development, mobile applications, and desktop software, I create responsive, user-centric experiences that combine beautiful design with powerful functionality.
+                    </p>
+
+                    <p class="text-gray-400 text-lg leading-relaxed mb-4">
+                        My journey in technology spans across multiple platforms—from crafting responsive websites and web applications to developing native Android apps and robust desktop solutions using modern frameworks and tools. I'm experienced in leveraging AI-powered development tools to accelerate workflows and improve code quality.
+                    </p>
+
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        As a fast learner and adaptable developer, I stay current with emerging technologies and industry best practices. I focus on clean code, intuitive user interfaces, and delivering solutions that not only meet requirements but exceed expectations. Every project is an opportunity to innovate and create something meaningful.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <div class="px-6 py-3 glass rounded-lg border border-gray-600">
+                            <p class="text-sm text-gray-300"><span class="font-bold text-white">10+</span> Projects Completed</p>
+                        </div>
+                        <div class="px-6 py-3 glass rounded-lg border border-gray-600">
+                            <p class="text-sm text-gray-300"><span class="font-bold text-white">20+</span> Technologies</p>
+                        </div>
+                        <div class="px-6 py-3 glass rounded-lg border border-gray-600">
+                            <p class="text-sm text-gray-300"><span class="font-bold text-white">100%</span> Dedication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-black relative">
+        <div class="max-w-7xl mx-auto">
+            <p class="section-eyebrow reveal"><span>02</span> Skills</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center section-title reveal">Technical Skills</h2>
+
+            <!-- Frontend Skills -->
+            <div class="mb-16 reveal">
+                <h3 class="text-2xl font-bold mb-8 text-white">Frontend Development</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/html-5.png" alt="HTML5" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">HTML5</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/css-3.png" alt="CSS3" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">CSS3</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Tailwind</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/js.png" alt="JavaScript" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">JavaScript</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="React" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">React</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/mobile.png" alt="Responsive" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Responsive</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="mb-16 reveal" style="transition-delay: 0.1s">
+                <h3 class="text-2xl font-bold mb-8 text-white">Backend Development</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/nodejs.png" alt="Node.js" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Node.js</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/php.png" alt="PHP" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">PHP</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" alt="Express.js" class="w-12 h-12 object-contain mb-2 invert">
+                        <p class="text-sm font-semibold text-center">Express.js</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/mysql.png" alt="MySQL" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">MySQL</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/database-management.png" alt="MongoDB" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">MongoDB</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+                        <p class="text-sm font-semibold text-center">REST API</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile & Desktop -->
+            <div class="mb-16 reveal" style="transition-delay: 0.2s">
+                <h3 class="text-2xl font-bold mb-8 text-white">Mobile & Desktop</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/android.png" alt="Android" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Android</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/kotlinicon.png" alt="Kotlin" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Kotlin</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2" viewBox="0 0 24 24" aria-label="Flutter"><path fill="#47C5FB" d="M14.314 0 2.3 12 6 15.7 21.684.012h-7.357L14.314 0zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>
+                        <p class="text-sm font-semibold text-center">Flutter</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2" viewBox="0 0 24 24" aria-label="Dart"><path fill="#0175C2" d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105l3.789-7.895zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263L4.784 4.784zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643-.302-.267-.567-.468-1.07-.462-.37.014-.87.195-.87.195L6.341 4.105l10.498.001z"/></svg>
+                        <p class="text-sm font-semibold text-center">Dart</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/c-sharp.png" alt="C#" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">C#</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/electronic.png" alt="Windows App" class="w-12 h-12 object-contain mb-2 invert opacity-90">
+                        <p class="text-sm font-semibold text-center">Windows App</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/wordpress-logo.png" alt="WordPress" class="w-12 h-12 object-contain mb-2 invert opacity-90">
+                        <p class="text-sm font-semibold text-center">WordPress</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/social.png" alt="Joomla" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Joomla</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design & No-Code -->
+            <div class="mb-16 reveal" style="transition-delay: 0.25s">
+                <h3 class="text-2xl font-bold mb-8 text-white">Design & No-Code Tools</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/figma.png" alt="Figma" class="w-12 h-12 object-contain mb-2 invert opacity-90">
+                        <p class="text-sm font-semibold text-center">Figma</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2" viewBox="0 0 24 24" fill="#4353FF" aria-label="Webflow"><path d="M24 4.515 16.342 19.485H9.149l3.205-6.204h-.144C9.566 17.713 5.621 20.13 0 19.485v-6.118s3.596-.213 5.71-2.435H0V4.515h6.417v5.278h.144l2.622-5.278h4.854v5.244h.144l2.72-5.244H24z"/></svg>
+                        <p class="text-sm font-semibold text-center">Webflow</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2" viewBox="0 0 24 24" fill="currentColor" aria-label="Framer"><path d="M4 0h16v8h-8L4 0zm0 8h8l8 8H12v8l-8-8V8z"/></svg>
+                        <p class="text-sm font-semibold text-center">Framer</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/ux.png" alt="UI/UX" class="w-12 h-12 object-contain mb-2 invert opacity-90">
+                        <p class="text-sm font-semibold text-center">UI/UX Design</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/></svg>
+                        <p class="text-sm font-semibold text-center">Prototyping</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg>
+                        <p class="text-sm font-semibold text-center">Wireframing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Other -->
+            <div class="reveal" style="transition-delay: 0.3s">
+                <h3 class="text-2xl font-bold mb-8 text-white">Tools & Technologies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/git.png" alt="Git" class="w-12 h-12 object-contain mb-2">
+                        <p class="text-sm font-semibold text-center">Git</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/github.png" alt="GitHub" class="w-12 h-12 object-contain mb-2 invert opacity-90">
+                        <p class="text-sm font-semibold text-center">GitHub</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <svg class="w-12 h-12 mb-2 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
+                        <p class="text-sm font-semibold text-center">AI Tools</p>
+                    </div>
+                    <div class="skill-card-hover glass rounded-xl p-6 flex flex-col items-center justify-center h-32 border border-gray-700 hover:border-accent">
+                        <img src="images/solving.png" alt="Problem Solving" class="w-12 h-12 object-contain mb-2 invert opacity-90">
+                        <p class="text-sm font-semibold text-center">Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-900 to-black relative">
+        <div class="max-w-7xl mx-auto">
+            <p class="section-eyebrow reveal"><span>03</span> Services</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center section-title reveal">Services & Solutions</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/web-development.png" alt="Website Development" class="w-16 h-16 object-contain"></div>
+                    <h3 class="text-2xl font-bold mb-4">Website Development</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Custom responsive websites built with modern technologies. From portfolio sites to complex web solutions with beautiful UI and smooth performance.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/web-development.png" alt="Web App Development" class="w-16 h-16 object-contain"></div>
+                    <h3 class="text-2xl font-bold mb-4">Web App Development</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Build scalable, feature-rich web applications. Full-stack solutions with modern frameworks, databases, and APIs for enterprise-level performance.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/mobile.png" alt="Mobile App Development" class="w-16 h-16 object-contain"></div>
+                    <h3 class="text-2xl font-bold mb-4">Mobile App Development</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Native Android applications with intuitive UI/UX. High-performance apps that provide seamless user experience across all devices.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/electronic.png" alt="Desktop Application" class="w-16 h-16 object-contain invert opacity-90"></div>
+                    <h3 class="text-2xl font-bold mb-4">Desktop Application</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Windows desktop applications built with C# and modern frameworks. Powerful tools and utilities tailored to your business needs.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/ux.png" alt="UI/UX Design" class="w-16 h-16 object-contain invert opacity-90"></div>
+                    <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Beautiful, intuitive interface design in Figma, plus no-code websites built with Webflow and Framer. User-centered approach with modern aesthetics and smooth interactions.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/database-management.png" alt="Database Integration" class="w-16 h-16 object-contain"></div>
+                    <h3 class="text-2xl font-bold mb-4">Database Integration</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Robust database solutions with MySQL and MongoDB. Secure data management, optimization, and seamless API integration.
+                    </p>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="glass rounded-xl p-8 border border-gray-700 card-hover reveal stagger-item">
+                    <div class="text-5xl mb-6"><img src="images/bug.png" alt="Bug Fixing & Optimization" class="w-16 h-16 object-contain invert opacity-90"></div>
+                    <h3 class="text-2xl font-bold mb-4">Bug Fixing & Optimization</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Fix performance issues and bugs. Code optimization, refactoring, and maintenance to ensure your applications run smoothly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-black relative">
+        <div class="max-w-7xl mx-auto">
+            <p class="section-eyebrow reveal"><span>04</span> Work</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center section-title reveal">Featured Projects</h2>
+
+            <div class="space-y-10">
+                <!-- FindMeTricycle -->
+                <article class="glass rounded-2xl border border-gray-700 overflow-hidden reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 bg-gradient-to-br from-gray-800 to-gray-900 p-8 flex flex-col justify-between gap-8">
+                            <div>
+                                <span class="text-sm font-semibold text-gray-500">01</span>
+                                <div class="text-7xl my-6">🛺</div>
+                                <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-accent text-black mb-3">Web + Mobile</span>
+                                <p class="text-sm text-gray-400">Full-Stack Mobile &amp; Web Application · Academic Capstone</p>
+                            </div>
+                            <a href="https://findmetricycle-web.vercel.app/" target="_blank" rel="noopener" class="block text-center px-6 py-3 bg-accent text-black rounded-lg font-semibold text-sm hover:bg-accent-light">
+                                Live Demo ↗
+                            </a>
+                        </div>
+                        <div class="lg:col-span-8 p-6 md:p-10">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4">FindMeTricycle</h3>
+                            <p class="text-gray-400 leading-relaxed mb-4">
+                                A full-stack transportation booking and management system built to address local transportation challenges in Guiuan, Eastern Samar, Philippines. It connects passengers with available tricycle drivers through a mobile app, making local transport more organized, accessible, and transparent.
+                            </p>
+                            <div class="project-note mb-6">
+                                <span class="font-semibold text-white">Problem addressed:</span> Limited access to organized tricycle booking, no real-time transportation visibility, and manual ride coordination.
+                            </div>
+
+                            <h4 class="project-label">Key Features</h4>
+                            <ul class="feature-list mb-6">
+                                <li>Passenger and driver mobile interfaces built with Flutter and Dart</li>
+                                <li>Real-time booking, driver location tracking, and ride status updates via Socket.IO</li>
+                                <li>Secure authentication with email OTP verification and role-based access</li>
+                                <li>Driver application website with document submission and identity verification</li>
+                                <li>Admin dashboard for driver verification, bookings, fares, and users</li>
+                                <li>Geofencing to manage transportation service boundaries</li>
+                                <li>Ride history, passenger ratings, notifications, and safety reporting</li>
+                                <li>Cloud deployment for frontend, backend services, and database</li>
+                            </ul>
+
+                            <h4 class="project-label">Technologies</h4>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-chip">Flutter</span><span class="tech-chip">Dart</span><span class="tech-chip">React.js</span><span class="tech-chip">Node.js</span><span class="tech-chip">Express.js</span><span class="tech-chip">MySQL</span><span class="tech-chip">Socket.IO</span><span class="tech-chip">REST APIs</span><span class="tech-chip">JWT</span><span class="tech-chip">MapLibre</span><span class="tech-chip">OpenFreeMap</span><span class="tech-chip">Git</span><span class="tech-chip">GitHub</span><span class="tech-chip">Vercel</span><span class="tech-chip">Railway</span>
+                            </div>
+
+                            <p class="text-sm text-gray-400"><span class="font-semibold text-white">My Role:</span> Full-Stack Developer, Mobile Application Developer, Backend Developer, Database Designer, UI/UX Developer</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TowerNet: Packet-Protocol -->
+                <article class="glass rounded-2xl border border-gray-700 overflow-hidden reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 bg-gradient-to-br from-gray-800 to-gray-900 p-8 flex flex-col justify-between gap-8">
+                            <div>
+                                <span class="text-sm font-semibold text-gray-500">02</span>
+                                <div class="text-7xl my-6">🛡️</div>
+                                <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-accent text-black mb-3">Web Game</span>
+                                <p class="text-sm text-gray-400">Browser-Based Educational Game · Web Game Development</p>
+                            </div>
+                            <a href="https://networkinggame12.vercel.app/" target="_blank" rel="noopener" class="block text-center px-6 py-3 bg-accent text-black rounded-lg font-semibold text-sm hover:bg-accent-light">
+                                Play Now ↗
+                            </a>
+                        </div>
+                        <div class="lg:col-span-8 p-6 md:p-10">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4">TowerNet: Packet-Protocol</h3>
+                            <p class="text-gray-400 leading-relaxed mb-4">
+                                An interactive browser-based tower defense game that makes computer networking concepts easier to learn through gamified play. Players learn network defense, data packet transmission, server protection, and the seven layers of the OSI model through strategic challenges.
+                            </p>
+                            <div class="project-note mb-6">
+                                <span class="font-semibold text-white">Problem addressed:</span> Abstract networking concepts are hard to grasp through traditional learning methods.
+                                <br><span class="font-semibold text-white">Goal:</span> Make networking education more interactive, engaging, and easier to understand.
+                            </div>
+
+                            <h4 class="project-label">Key Features</h4>
+                            <ul class="feature-list mb-6">
+                                <li>Browser-based tower defense game built with HTML5, CSS3, and JavaScript</li>
+                                <li>The seven OSI layers integrated into the gameplay mechanics</li>
+                                <li>Ten progressive waves with increasing difficulty</li>
+                                <li>Network-themed towers, packet-based enemies, and server protection</li>
+                                <li>Interactive server connection system using IP address input</li>
+                                <li>Real-time gameplay logs, network status indicators, and visual feedback</li>
+                                <li>Tutorials, sound effects, animations, and fullscreen mode</li>
+                                <li>Responsive layouts and mobile compatibility improvements</li>
+                            </ul>
+
+                            <h4 class="project-label">Technologies</h4>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-chip">HTML5</span><span class="tech-chip">CSS3</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Browser APIs</span><span class="tech-chip">Responsive Web Design</span><span class="tech-chip">Git</span><span class="tech-chip">GitHub</span><span class="tech-chip">Vercel</span>
+                            </div>
+
+                            <p class="text-sm text-gray-400"><span class="font-semibold text-white">My Role:</span> Web Game Developer, Gameplay Designer, UI/UX Developer, Software Tester</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- IntroVibe -->
+                <article class="glass rounded-2xl border border-gray-700 overflow-hidden reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-12">
+                        <div class="lg:col-span-4 bg-gradient-to-br from-gray-800 to-gray-900 p-8 flex flex-col justify-between gap-8">
+                            <div>
+                                <span class="text-sm font-semibold text-gray-500">03</span>
+                                <div class="text-7xl my-6">✨</div>
+                                <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-accent text-black mb-3">Web App</span>
+                                <p class="text-sm text-gray-400">Full-Stack Social Networking Web Application</p>
+                            </div>
+                            <a href="https://introvibee.vercel.app/" target="_blank" rel="noopener" class="block text-center px-6 py-3 bg-accent text-black rounded-lg font-semibold text-sm hover:bg-accent-light">
+                                Live Demo ↗
+                            </a>
+                        </div>
+                        <div class="lg:col-span-8 p-6 md:p-10">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4">IntroVibe</h3>
+                            <p class="text-gray-400 leading-relaxed mb-4">
+                                A personality-based social networking platform that helps users build meaningful connections based on shared interests, communication preferences, and personality. A short assessment categorizes users as Introverts, Ambiverts, or Extroverts, which powers personalized matching and a more comfortable, inclusive online space for every communication style.
+                            </p>
+                            <div class="project-note mb-6">
+                                <span class="font-semibold text-white">Problem addressed:</span> Traditional social platforms offer little personalization for users with different personality types and communication preferences.
+                                <br><span class="font-semibold text-white">Goal:</span> Encourage meaningful connections through personality-aware matching, shared interests, and personalized communication.
+                            </div>
+
+                            <h4 class="project-label">Key Features</h4>
+                            <ul class="feature-list mb-6">
+                                <li>Five-question personality assessment (Introvert, Ambivert, Extrovert)</li>
+                                <li>Interest-based onboarding and personalized user profiles</li>
+                                <li>Personality and interest-based matching system</li>
+                                <li>Direct messaging and group conversations</li>
+                                <li>Personality-adaptive one-on-one and group social experiences</li>
+                                <li>Sudoku mini-game as an alternative interactive activity</li>
+                                <li>Personalized wellness and communication tips per personality type</li>
+                                <li>User authentication, messaging workflows, and database design</li>
+                                <li>Responsive frontend interfaces with backend API connectivity</li>
+                                <li>Cloud-based frontend and database infrastructure</li>
+                            </ul>
+
+                            <h4 class="project-label">Technologies</h4>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-chip">React.js</span><span class="tech-chip">Vite</span><span class="tech-chip">JavaScript</span><span class="tech-chip">HTML5</span><span class="tech-chip">CSS3</span><span class="tech-chip">Node.js</span><span class="tech-chip">Express.js</span><span class="tech-chip">MySQL</span><span class="tech-chip">REST APIs</span><span class="tech-chip">Git</span><span class="tech-chip">GitHub</span><span class="tech-chip">Vercel</span><span class="tech-chip">Railway</span>
+                            </div>
+
+                            <p class="text-sm text-gray-400"><span class="font-semibold text-white">My Role:</span> Full-Stack Web Developer, Frontend Developer, Backend Developer, Database Designer, UI/UX Developer</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey / Experience Section -->
+    <section id="journey" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-gray-900 to-black relative">
+        <div class="max-w-4xl mx-auto">
+            <p class="section-eyebrow reveal"><span>05</span> Journey</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center section-title reveal">My Journey</h2>
+
+            <div class="space-y-12">
+                <!-- Timeline 1 -->
+                <div class="timeline-item reveal stagger-item">
+                    <div class="glass rounded-lg p-6 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-2">Self-Taught Programming</h3>
+                        <p class="text-gray-400 text-sm mb-3">Foundation Building</p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Started my programming journey by learning fundamental concepts of web development. Mastered HTML, CSS, and JavaScript through dedication and practice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 2 -->
+                <div class="timeline-item reveal stagger-item">
+                    <div class="glass rounded-lg p-6 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-2">Modern Web Technologies</h3>
+                        <p class="text-gray-400 text-sm mb-3">Framework & Full-Stack Development</p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Expanded expertise to include React, Node.js, and database technologies. Built full-stack applications with modern architectures and best practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 3 -->
+                <div class="timeline-item reveal stagger-item">
+                    <div class="glass rounded-lg p-6 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-2">Cross-Platform Development</h3>
+                        <p class="text-gray-400 text-sm mb-3">Mobile & Desktop Solutions</p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Ventured into Android app development with Kotlin and Windows desktop applications with C#. Diversified skill set across multiple platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 4 -->
+                <div class="timeline-item reveal stagger-item">
+                    <div class="glass rounded-lg p-6 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-2">AI-Powered Development</h3>
+                        <p class="text-gray-400 text-sm mb-3">Modern Tools & Workflows</p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Embraced AI development tools to accelerate workflows and improve code quality. Leveraging cutting-edge technology for enhanced productivity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 5 -->
+                <div class="timeline-item reveal stagger-item">
+                    <div class="glass rounded-lg p-6 border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-2">Continuous Learning</h3>
+                        <p class="text-gray-400 text-sm mb-3">Future-Ready Developer</p>
+                        <p class="text-gray-400 leading-relaxed">
+                            Committed to continuous improvement. Staying updated with industry trends, exploring new technologies, and building innovative solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-black relative">
+        <div class="max-w-4xl mx-auto">
+            <p class="section-eyebrow reveal"><span>06</span> Contact</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center section-title reveal">Get In Touch</h2>
+            <p class="text-gray-400 text-center mb-16 reveal" style="transition-delay: 0.1s">
+                Have a project in mind? Let's collaborate and create something amazing together!
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="glass rounded-xl p-8 border border-gray-700 reveal stagger-item">
+                    <h3 class="text-2xl font-bold mb-6">Send Message</h3>
+                    <form id="contactForm" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms: paste your access key from https://web3forms.com below -->
+                        <input type="hidden" name="access_key" value="PASTE-YOUR-ACCESS-KEY-HERE">
+                        <input type="hidden" name="from_name" value="Renz Jay Portfolio">
+                        <!-- Honeypot: bots fill this, humans never see it -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <div>
+                            <label for="contactName" class="block text-sm font-semibold mb-2">Your Name</label>
+                            <input
+                                id="contactName"
+                                name="name"
+                                type="text"
+                                required
+                                placeholder="John Doe"
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-accent transition-all"
+                            >
+                        </div>
+                        <div>
+                            <label for="contactEmail" class="block text-sm font-semibold mb-2">Your Email</label>
+                            <input
+                                id="contactEmail"
+                                name="email"
+                                type="email"
+                                required
+                                placeholder="john@example.com"
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-accent transition-all"
+                            >
+                        </div>
+                        <div>
+                            <label for="contactMessage" class="block text-sm font-semibold mb-2">Message</label>
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                required
+                                placeholder="Your message here..."
+                                rows="5"
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-accent transition-all resize-none"
+                            ></textarea>
+                        </div>
+                        <button
+                            id="contactSubmit"
+                            type="submit"
+                            class="w-full px-6 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent-light transition-all transform hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                        >
+                            Send Message
+                        </button>
+                        <p id="contactStatus" class="hidden text-sm text-center rounded-lg px-4 py-3" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6 reveal stagger-item" style="transition-delay: 0.1s">
+                    <div class="glass rounded-xl p-8 border border-gray-700">
+                        <div class="flex items-start gap-4">
+                            <div class="contact-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg></div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Email</h4>
+                                <a href="mailto:renzey18@gmail.com" class="text-gray-400 hover:text-accent">renzey18@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-xl p-8 border border-gray-700">
+                        <div class="flex items-start gap-4">
+                            <div class="contact-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg></div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-1">Location</h4>
+                                <p class="text-gray-400">Philippines</p>
+                                 <p class="text-gray-400">Giporlos Eastern Samar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass rounded-xl p-8 border border-gray-700">
+                        <div class="flex items-start gap-4">
+                            <div class="contact-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg></div>
+                            <div class="w-full">
+                                <h4 class="text-lg font-bold mb-3">Follow Me</h4>
+                                <div class="flex gap-3">
+                                    <a href="https://www.facebook.com/share/18nuPDUxeo/" target="_blank" class="w-12 h-12 glass rounded-lg flex items-center justify-center hover:bg-accent hover:text-black transition-all transform hover:scale-110">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/ren-zey-96a1552a5" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-12 h-12 glass rounded-lg flex items-center justify-center hover:bg-accent hover:text-black transition-all transform hover:scale-110">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-2 glow-text">Renz Jay Algario</h3>
+                    <p class="text-gray-400">Full Stack Developer | Creative Problem Solver</p>
+                </div>
+                <button class="scroll-to-top" id="scrollToTop">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7-7m0 0l-7 7m7-7v12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Renz Jay Algario. All rights reserved. Crafted with creativity and modern technologies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
